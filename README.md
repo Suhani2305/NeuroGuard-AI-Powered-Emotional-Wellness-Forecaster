@@ -60,4 +60,48 @@ streamlit run app/dashboard.py
 ## Privacy Note
 All analysis runs locally. No data is stored or sent to the cloud.
 
+## Facial Emotion Recognition (CNN - Keras/TensorFlow)
+
+For real-world accuracy, use the provided CNN model:
+
+### 1. Install TensorFlow (if not already):
+```bash
+pip install tensorflow
+```
+
+### 2. Train the CNN on FER2013:
+```bash
+python scripts/facial_emotion_cnn.py
+```
+- This will train a CNN on your `data/face/train` and evaluate on `data/face/test`.
+- Best model will be saved as `models/facial_emotion_cnn.h5` and final as `models/facial_emotion_cnn_final.h5`.
+
+### 3. Evaluate/Test:
+- After training, the script will print test accuracy.
+- You can load and use the model for inference in your app/dashboard.
+
+---
+
+## Voice Emotion Recognition (CNN - Keras/TensorFlow)
+
+For real-world accuracy, use the provided CNN model for RAVDESS:
+
+### 1. Install TensorFlow and librosa (if not already):
+```bash
+pip install tensorflow librosa tqdm
+```
+
+### 2. Train the CNN on RAVDESS:
+```bash
+python scripts/voice_emotion_cnn.py
+```
+- This will train a CNN on your `data/voice/Actor_XX/*.wav` files.
+- Best model will be saved as `models/voice_emotion_cnn.h5`.
+
+### 3. Evaluate/Test:
+- After training, the script will print test accuracy.
+- You can load and use the model for inference in your app/dashboard.
+
+---
+
  
