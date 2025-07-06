@@ -1,0 +1,13 @@
+opencv-python
+mediapipe
+librosa
+transformers
+pyAudioAnalysis
+streamlit
+torch
+scikit-learn
+textblob
+vaderSentiment
+pandas
+matplotlib
+fbprophet 
