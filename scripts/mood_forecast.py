@@ -1,7 +1,7 @@
 import os
 import pandas as pd
 import matplotlib.pyplot as plt
-from fbprophet import Prophet
+from prophet import Prophet
 from datetime import datetime, timedelta
 
 # Load or create mood score data
